@@ -8,12 +8,13 @@ const getWeather = async () => {
   const data = await response.json();
 
   const weatherDiv = document.getElementById("weather");
+  const cityTitle = document.querySelector('#titleCity')
 
   if (data.cod === "404") {
     weatherDiv.innerHTML = "Місто не знайдено";
   } else {
     const forecasts = data.list.filter((forecast) => forecast.dt_txt.includes("12:00:00"));
-    weatherDiv.innerHTML = `
+    cityTitle.innerHTML = `
       <h2>${data.city.name}</h2>
     `;
     forecasts.forEach((forecast) => {

@@ -1,5 +1,19 @@
 *{
-  background-color: lightgray;
-  margin: 0, auto;
+  background-color: white;
+  margin: 0 auto;
   text-align: center;
+}
+#city{
+  margin: 1em;
+}
+
+#weather{
+  display: flex;
+  justify-content: space-around;
+}
+#titleCity{
+  margin: 1em;
+}
+h1{
+  margin: 2em;
 }
